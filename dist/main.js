@@ -76,7 +76,7 @@ function main() {
                         if (isNaN(Number(rating)) || isNaN(Number(distance)) || isNaN(Number(price))) {
                             throw Error("Invalid input; rating, distance, and price must be numeric");
                         }
-                        if (Number(rating) < 1 || Number(rating) > 5) {
+                        if (rating != "" && Number(rating) < 1 || Number(rating) > 5) {
                             throw Error("Expected rating from 1-5 stars");
                         }
                         // truthiness can get weird. setting all unused values to undefined for safety
